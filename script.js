@@ -52,3 +52,23 @@ navbar.addEventListener('dblclick', function () {
     }
 });
 
+let cards = document.querySelectorAll('.card');
+
+cards.forEach(card => {
+    
+  let viewButton = card.querySelector('.btn-success');
+  let cardImage = card.querySelector('.card-img-top');
+  let cardText = card.querySelector('.card-text');
+  
+  viewButton.addEventListener('mouseenter', function () {
+    cardImage.style.width = '20%';
+    cardText.style.display = 'none';
+  });
+
+  viewButton.addEventListener('mouseleave', function () {
+    cardImage.style.width = '';  
+    cardText.style.display = ''; 
+  });
+});
+
+
